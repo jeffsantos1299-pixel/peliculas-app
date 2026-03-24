@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const directorSchema = new mongoose.Schema({
-    nombres: {
+const productoraSchema = new mongoose.Schema({
+    nombre: {
         type: String,
         required: true
     },
@@ -9,6 +9,14 @@ const directorSchema = new mongoose.Schema({
         type: String,
         enum: ['Activo', 'Inactivo'],
         default: 'Activo',
+        required: true
+    },
+    slogan: {
+        type: String,
+        required: false
+    },
+    descripcion: {
+        type: String,
         required: true
     }
 }, {
@@ -18,6 +26,6 @@ const directorSchema = new mongoose.Schema({
     }
 });
 
-const Director = mongoose.model('Director', directorSchema);
+const Productora = mongoose.model('Productora', productoraSchema);
 
-export default Director;
+export default Productora;

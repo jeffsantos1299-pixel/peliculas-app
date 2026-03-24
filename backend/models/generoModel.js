@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const directorSchema = new mongoose.Schema({
-    nombres: {
+const generoSchema = new mongoose.Schema({
+    nombre: {
         type: String,
         required: true
     },
@@ -9,6 +9,10 @@ const directorSchema = new mongoose.Schema({
         type: String,
         enum: ['Activo', 'Inactivo'],
         default: 'Activo',
+        required: true
+    },
+    descripcion: {
+        type: String,
         required: true
     }
 }, {
@@ -18,6 +22,6 @@ const directorSchema = new mongoose.Schema({
     }
 });
 
-const Director = mongoose.model('Director', directorSchema);
+const Genero = mongoose.model('Genero', generoSchema);
 
-export default Director;
+export default Genero;

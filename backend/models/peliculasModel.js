@@ -2,6 +2,11 @@ import mongoose from "mongoose";
 
 const peliculaSchema = new mongoose.Schema({
      
+    serial: {
+        type: String,
+        required: true,
+        unique: true
+    },
     titulo: {
         type: String,
         required: true
@@ -10,31 +15,35 @@ const peliculaSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    urlPelicula: {
+    url: {
         type: String,
         required: true,
         unique: true
     },
-    imagenPortada: {
+    imagen_portada: {
         type: String,
         required: true
     },
-    generoPrincipal: {
+    anio_estreno: {
+        type: Number,
+        required: true
+    },
+    genero_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Genero',
         required: true
     },
-    directorPrincipal: {
+    director_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Director',
         required: true
     },
-    productora: {
+    productora_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Productora',
         required: true
     },
-    tipo: {
+    tipo_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Tipo',
         required: true
