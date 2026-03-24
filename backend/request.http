@@ -1,0 +1,163 @@
+#---------Directores---------------------------
+GET http://localhost:3001/directores
+
+###
+GET http://localhost:3001/directores/69ade3efc518bc2b7f9848cc
+
+
+###
+POST http://localhost:3001/directores
+Content-Type: application/json
+
+{
+    "nombre": " Martin Scorse",
+    "estado" : "Activo"
+}
+
+###
+PUT http://localhost:3001/directores/69ade422c518bc2b7f9848cf
+Content-Type: application/json
+
+{
+    "nombres": "Stanley Kubrick",
+    "estado": "Activo"
+}
+
+###
+DELETE http://localhost:3001/directores/69ade422c518bc2b7f9848cf
+
+#----------------GENERO--------------------------
+
+###
+GET http://localhost:3001/generos
+
+###
+POST http://localhost:3001/generos
+Content-Type: application/json
+
+{
+    "nombre": "Accion",
+    "estado": "Activo",
+    "descripcion": "Adrenalina y mucho mas"
+}
+###
+GET http://localhost:3001/generos/69adec2cc518bc2b7f9848d8
+
+###
+PUT http://localhost:3001/generos/69adf0332d31d3ef3c0caeba
+Content-Type: application/json
+
+{
+    "nombre": "Terror",
+    "estado": "Activo",
+    "descripcion": "Hisotrias espeluznantes y aterradoras "
+}
+
+###
+DELETE http://localhost:3001/generos/69adf0332d31d3ef3c0caeba
+
+#----------------------PRODUCTORAS--------------------------
+###
+GET  http://localhost:3001/productoras
+
+###
+GET http://localhost:3001/productoras/69ae0c27afa76b5a72b1af50
+
+###
+POST http://localhost:3001/productoras
+Content-Type: application/json
+
+{
+    "nombre": "FOX",
+    "estado": "Activo",
+    "slogan": "",
+    "descripcion": "Uno de los estudio más grande de Hollwood"
+
+}
+
+###
+PUT http://localhost:3001/productoras/69ae0ab5afa76b5a72b1af4e
+
+Content-Type: application/json
+
+{
+    "nombre": "FOX",
+    "estado": "Inactivo",
+    "slogan": "",
+    "descripcion": "Comprado por Disney Picures"
+
+}
+
+###
+DELETE  http://localhost:3001/productoras/69ae0ab5afa76b5a72b1af4e
+
+#-------------------TIPO---------------------------------
+###
+GET  http://localhost:3001/tipos
+
+###
+GET http://localhost:3001/tipos/69ae136c98433539e7f7cfca
+
+###
+POST  http://localhost:3001/tipos
+Content-Type: application/json
+
+{
+    "nombre": "Demo",
+    "descripcion": "Demostracciones"
+}
+
+###
+PUT http://localhost:3001/tipos/69ae46a8b3cc6e363868c7fe
+Content-Type: application/json
+
+{
+    "nombre": "Demo",
+    "estado": "Inactivo",
+    "descripcion": "Demostracciones"
+}
+
+###
+DELETE  http://localhost:3001/tipos/69ae46a8b3cc6e363868c7fe
+
+
+###--------------------PELICULAS--------------------------------------------
+
+GET http://localhost:3001/peliculas
+
+###
+GET http://localhost:3001/peliculas/69ae1d658e49b6855fca1429
+
+###
+POST http://localhost:3001/peliculas
+Content-Type: application/json
+
+{
+    "titulo": "Stranger Thingss",
+    "sinopsis": "Un grupo de niños descubre un mundo paralelo lleno de misterios y criaturas sobrenaturales.",
+    "urlPelicula": "http://localhost:3001/series/strangerthings",
+    "imagenPortada": "http://localhost:3001/images/strangerthings.jpg",
+    "generoPrincipal": "69adefc22d31d3ef3c0caeb8",
+    "directorPrincipal": "69ade3efc518bc2b7f9848cc",
+    "productora": "69ae0e59afa76b5a72b1af52",
+    "tipo": "69ae136c98433539e7f7cfca"
+}
+
+###
+PUT http://localhost:3001/peliculas/69ae1def8e49b6855fca142f
+Content-Type: application/json
+
+{
+    "titulo": "Stranger Things",
+    "sinopsis": "Un grupo de niños descubre un mundo paralelo lleno de misterios y criaturas sobrenaturales.",
+    "urlPelicula": "http://localhost:3001/series/strangerthings",
+    "imagenPortada": "http://localhost:3001/images/strangerthings.jpg",
+    "generoPrincipal": "69adefc22d31d3ef3c0caeb8",
+    "directorPrincipal": "69ade3efc518bc2b7f9848cc",
+    "productora": "69ae0f0fafa76b5a72b1af55",
+    "tipo": "69ae136c98433539e7f7cfca"
+}
+
+###
+DELETE http://localhost:3001/peliculas/69ae1809f3b1f00eaf4264a7
+
